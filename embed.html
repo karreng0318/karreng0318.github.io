@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karthik Rengarajan</title>
+  <base target="_blank">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #12201c;
+      --muted: #3a4a44;
+      --paper: #f6f1e6;
+      --card: #fffdf8;
+      --line: rgba(18, 32, 28, 0.12);
+      --sea: #1c4a45;
+      --sea-deep: #0d2421;
+      --brass: #b07d2a;
+      --sans: "Figtree", "Segoe UI", sans-serif;
+      --serif: "Fraunces", "Times New Roman", serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+    a { color: var(--sea); }
+    .wrap { padding: 0 0 1.25rem; }
+    .brand { padding: 1rem 1rem 0; }
+    .tabs { padding: 0 1rem; }
+    .panel { padding: 0 1rem; }
+    .cover {
+      margin: 0 0 0.9rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover img {
+      display: block; width: 100%; height: 9.5rem;
+      object-fit: cover; object-position: center 62%;
+    }
+    .cover figcaption {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 0.45rem 1rem;
+      font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #f6f1e6; background: linear-gradient(transparent, rgba(13,36,33,.85));
+      font-weight: 700;
+    }
+    .brand { display: flex; gap: 0.7rem; align-items: center; margin-bottom: 0.85rem; }
+    .mark {
+      width: 2.2rem; height: 2.2rem; border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--sea); color: var(--paper);
+      font-family: var(--serif); font-weight: 650;
+    }
+    .brand strong { display: block; font-size: 1rem; }
+    .brand span { color: var(--muted); font-size: 0.78rem; }
+    h1, h2, h3 { font-family: var(--serif); line-height: 1.2; margin: 0 0 0.4rem; }
+    h1 { font-size: 1.65rem; font-weight: 600; }
+    h2 { font-size: 1.2rem; }
+    h3 { font-size: 1.05rem; }
+    p { margin: 0 0 0.7rem; color: var(--muted); }
+    .lede { font-size: 1.02rem; }
+    .tabs {
+      display: flex; flex-wrap: wrap; gap: 0.35rem;
+      margin: 0.9rem 0 1rem;
+    }
+    .tabs button {
+      font: inherit; cursor: pointer;
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 999px;
+      padding: 0.38rem 0.75rem;
+      color: var(--muted);
+    }
+    .tabs button[aria-selected="true"] {
+      background: var(--sea); color: var(--paper); border-color: var(--sea);
+    }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .chips, .actions { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.7rem 0; }
+    .chip, .tag, .status {
+      border-radius: 999px; padding: 0.18rem 0.55rem; font-size: 0.75rem;
+      border: 1px solid var(--line); background: var(--card);
+    }
+    .status { font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .granted { background: #dcecdd; color: #245534; border-color: transparent; }
+    .pending { background: #f4e6c8; color: #6d4d12; border-color: transparent; }
+    .btn {
+      display: inline-flex; text-decoration: none; font-weight: 650;
+      border-radius: 999px; padding: 0.5rem 0.85rem; font-size: 0.92rem;
+    }
+    .btn-primary { background: var(--sea); color: var(--paper); }
+    .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
+    .grid { display: grid; gap: 0.7rem; }
+    @media (min-width: 720px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+    .card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 16px; padding: 0.9rem 1rem;
+    }
+    .kicker {
+      letter-spacing: 0.12em; text-transform: uppercase;
+      font-size: 0.7rem; color: var(--brass); font-weight: 700; margin: 0 0 0.3rem;
+    }
+    .job { display: grid; gap: 0.15rem; }
+    .job time { color: var(--muted); font-size: 0.86rem; }
+    .facts { list-style: none; margin: 0; padding: 0; }
+    .facts li + li { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid var(--line); }
+    .facts span { display: block; color: var(--brass); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .path-summary {
+      list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 0.5rem;
+      align-items: center; margin: 0 0 1rem; padding: 0; font-size: 0.86rem; font-weight: 650;
+    }
+    .path-summary li { display: flex; align-items: center; gap: 0.45rem; }
+    .path-summary li span {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 999px; padding: 0.28rem 0.65rem;
+    }
+    .path-summary li:not(:last-child)::after { content: "→"; color: var(--brass); }
+    .path-list {
+      list-style: none; margin: 0; padding: 0 0 0 0.35rem;
+      border-left: 2px solid var(--line);
+    }
+    .path-list > li { position: relative; padding: 0 0 0.95rem 1.15rem; }
+    .path-list > li:last-child { padding-bottom: 0; }
+    .path-list > li::before {
+      content: ""; position: absolute; left: -0.4rem; top: 0.4rem;
+      width: 0.65rem; height: 0.65rem; border-radius: 50%; background: var(--sea);
+      box-shadow: 0 0 0 3px var(--paper);
+    }
+    .path-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.2rem; }
+    .path-meta time { color: var(--muted); font-size: 0.82rem; }
+    .path-list h3 { font-size: 1.02rem; margin: 0 0 0.2rem; }
+    .path-list p { margin: 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <figure class="cover">
+      <img src="assets/cover.jpg" alt="Cover image: laptop, autonomous vehicle model, sailboat model, control diagrams, and a path-planning lab plaque.">
+      <figcaption>Integrated Autonomous Systems &amp; Advanced Controls · Path Planning Lab</figcaption>
+    </figure>
+    <div class="brand">
+      <div class="mark" aria-hidden="true">KR</div>
+      <div>
+        <strong>Karthik Rengarajan</strong>
+        <span>Controls · Autonomy · Research</span>
+      </div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Profile sections">
+      <button type="button" role="tab" aria-selected="true" aria-controls="profile" id="tab-profile" data-tab="profile">Profile</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="career" id="tab-career" data-tab="career">Career</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="research" id="tab-research" data-tab="research">Research</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="patents" id="tab-patents" data-tab="patents">Patents</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="code" id="tab-code" data-tab="code">Code</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="writing" id="tab-writing" data-tab="writing">Writing</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="contact" id="tab-contact" data-tab="contact">Contact</button>
+    </div>
+
+    <section class="panel active" id="profile" role="tabpanel" aria-labelledby="tab-profile">
+      <p class="kicker">University of Michigan–Dearborn · RMI Lab</p>
+      <h1>Senior controls engineer and doctoral candidate.</h1>
+      <p class="lede">Autonomous systems and robotics are the core of both my D.Eng. research and my industry work: vehicle dynamics, nonlinear adaptive control, motion control, and ISO 26262 functional safety for autonomous and electrified platforms.</p>
+      <div class="chips">
+        <span class="chip">Senior Controls Engineer, Nuro</span>
+        <span class="chip">D.Eng. candidate, Computer Engineering</span>
+        <span class="chip">H-1B</span>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="assets/Karthik_Rengarajan_CV.pdf">Download CV</a>
+        <a class="btn btn-ghost" href="mailto:karthik.rengarajan3@gmail.com">Email</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/karthik-rengarajan">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=8799Yj0AAAAJ&hl=en">Scholar</a>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <p>I develop novel control algorithms, hold a utility-patent portfolio cited by automotive OEMs, and serve as a peer reviewer for control-systems conferences.</p>
+          <p>At Nuro I lead motion-controller and trajectory-processor software on the Uber Nuro Lucid Robotaxi program, including ISO 26262 safety requirements and state-estimation research. Before that: steer-by-wire at Nexteer, heavy-duty truck controls at TuSimple, and electrified powertrain controls at FEV.</p>
+        </article>
+        <aside class="card">
+          <ul class="facts">
+            <li><span>Education</span> D.Eng., Computer Engineering / ECE, UM–Dearborn (Jan 2025 – present), advisor Dr. Alireza Mohammadi<br>M.Eng., Mechanical Engineering — Controls, Texas A&amp;M, 2018, 3.88/4.0<br>B.Tech., Mechanical Engineering, Amrita University, 2016, 9.38/10.0</li>
+            <li><span>Practice</span> Autonomous vehicles, robot motion control, sliding mode and backstepping, Kalman/particle filters, ISO 26262, ASPICE</li>
+            <li><span>Tools</span> MATLAB/Simulink/Stateflow, CarSim, Python, C/C++, dSPACE, ETAS-INCA, Vector, AUTOSAR, IBM DOORS</li>
+            <li><span>Visa</span> H-1B holder</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="panel" id="career" role="tabpanel" aria-labelledby="tab-career" hidden>
+      <h2>Career path</h2>
+      <p>Education, then industry roles in electrified powertrain, autonomous trucks, steer-by-wire, and robotaxi motion control. Doctoral study runs in parallel from 2025.</p>
+      <ol class="path-summary" aria-label="Career sequence">
+        <li><span>Amrita</span></li>
+        <li><span>Texas A&amp;M</span></li>
+        <li><span>FEV</span></li>
+        <li><span>TuSimple</span></li>
+        <li><span>Nexteer</span></li>
+        <li><span>Nuro</span></li>
+      </ol>
+      <ol class="path-list">
+        <li>
+          <div class="path-meta"><time datetime="2016-06">Jun 2016</time><span class="tag">Education</span></div>
+          <h3>B.Tech., Mechanical Engineering · Amrita University</h3>
+          <p>GPA 9.38/10.0.</p>
+        </li>
+        <li>
+          <div class="path-meta"><time datetime="2018-12">Dec 2018</time><span class="tag">Education</span></div>
+          <h3>M.Eng., Mechanical Engineering — Controls · Texas A&amp;M</h3>
+          <p>College Station, TX. GPA 3.88/4.0.</p>
+        </li>
+        <li>
+          <div class="path-meta"><time datetime="2019-02">Feb 2019 – Feb 2022</time><span class="tag">Industry</span></div>
+          <h3>Control Systems Engineer, Electrified Powertrain · FEV</h3>
+          <p>Hybrid torque management, motor-speed PID, start-stop controls, MIL/SIL/HIL. Auburn Hills, MI.</p>
+        </li>
+        <li>
+          <div class="path-meta"><time datetime="2022-02">Feb 2022 – Aug 2022</time><span class="tag">Industry</span></div>
+          <h3>Vehicle Controls Engineer, Integration · TuSimple</h3>
+          <p>Longitudinal and power-bridge controls for autonomous heavy-duty trucks. Tucson, AZ.</p>
+        </li>
+        <li>
+          <div class="path-meta"><time datetime="2022-08">Aug 2022 – Feb 2026</time><span class="tag">Industry</span></div>
+          <h3>System Controls Engineer II · Nexteer</h3>
+          <p>Full-cycle steer-by-wire, driver feel, pinch detection, AUTOSAR. Auburn Hills, MI.</p>
+        </li>
+        <li>
+          <div class="path-meta"><time datetime="2025-01">Jan 2025 – present</time><span class="tag">Education</span></div>
+          <h3>D.Eng., Computer Engineering / ECE · UM–Dearborn</h3>
+          <p>Advisor Dr. Alireza Mohammadi. Sailboat motion planning with nonlinear control and RL.</p>
+        </li>
+        <li>
+          <div class="path-meta"><time datetime="2026-02">Feb 2026 – present</time><span class="tag">Industry</span></div>
+          <h3>Senior Controls Engineer · Nuro</h3>
+          <p>Motion controllers and trajectory processors on the Uber Nuro Lucid Robotaxi program; ISO 26262 SSRs.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="panel" id="research" role="tabpanel" aria-labelledby="tab-research" hidden>
+      <h2>Doctoral research and methods.</h2>
+      <p>Advisor: Dr. Alireza Mohammadi, Robotic Motion Intelligence Lab. Focus: advanced control for autonomous sailboat motion planning using nonlinear control and reinforcement learning.</p>
+      <div class="grid two">
+        <article class="card"><p class="kicker">Marine autonomy</p><h3>Sailboat motion planning and control</h3><p>Nonlinear guidance and control for wind-propelled craft, with a Python simulator covering MPC, MRAC, SMC, PID, and RL path-following. Elsevier journal manuscript in preparation.</p></article>
+        <article class="card"><p class="kicker">Chassis and SbW</p><h3>Steer-by-wire feel and disturbance rejection</h3><p>End-of-travel, misalignment, ADAS integration, brake-pull and torque-steer mitigation, understeer/oversteer feel, and pinch detection for stowable columns.</p></article>
+        <article class="card"><p class="kicker">Methods</p><h3>Nonlinear, adaptive, and learning control</h3><p>Sliding mode, backstepping, state estimation (Kalman and particle filters), and policy learning on shared vehicle and marine plants.</p></article>
+        <article class="card"><p class="kicker">Safety</p><h3>ISO 26262 and verification</h3><p>Safety requirement specifications on the robotaxi program; MIL/HIL/in-vehicle V&amp;V; invited reviewer for MECC 2026 on data-driven safety verification and gain synthesis.</p></article>
+      </div>
+    </section>
+
+    <section class="panel" id="patents" role="tabpanel" aria-labelledby="tab-patents" hidden>
+      <h2>Inventions in steering, feel, and safety.</h2>
+      <p>Nine utility patent applications: three granted, one published, one provisional. Cited by General Motors, Honda, and Samsung.</p>
+      <div class="grid two">
+        <article class="card">
+          <span class="status granted">Granted</span>
+          <h3>Surface recognition during differential braking</h3>
+          <p>US 12,391,257 B2 · 19 Aug 2025. Infers surface friction from brake-to-steer commands and wheel slip.</p>
+          <a href="https://patents.google.com/patent/US12391257B2/en">Google Patents</a>
+        </article>
+        <article class="card">
+          <span class="status granted">Granted</span>
+          <h3>Pinch detection for column adjustment actuators</h3>
+          <p>US 12,570,351 B2 · 10 Mar 2026. Flags pinching from predicted vs actual column velocity during rake/stow.</p>
+          <a href="https://patents.google.com/patent/US12570351B2/en">Google Patents</a>
+        </article>
+        <article class="card">
+          <span class="status granted">Granted</span>
+          <h3>Brake pull and torque-steer driver-feel mitigation</h3>
+          <p>US 12,654,767 B2 · 16 Jun 2026. Learns rack-force impact and opposes it through the handwheel actuator.</p>
+          <a href="https://patents.google.com/patent/US20250136174A1/en">Publication</a>
+        </article>
+        <article class="card">
+          <span class="status pending">Published application</span>
+          <h3>Understeer / oversteer feel modification</h3>
+          <p>US 2025/0178664 A1. Shapes handwheel torque from yaw error so limit handling can be felt through the steering interface.</p>
+          <a href="https://patents.google.com/patent/US20250178664A1/en">Google Patents</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="code" role="tabpanel" aria-labelledby="tab-code" hidden>
+      <h2>Code I can point to.</h2>
+      <p>Public work: <a href="https://github.com/karreng0318">github.com/karreng0318</a></p>
+      <div class="grid two">
+        <article class="card"><p class="kicker">Python</p><h3>Sailboat_Sim</h3><p>Nonlinear plant with Riccati, MRAC, SMC, PID, and RL path following.</p><a href="https://github.com/karreng0318/Sailboat_Sim-main">Repository</a></article>
+        <article class="card"><p class="kicker">MATLAB</p><h3>PID vs LQR vs SMC vs MRAC</h3><p>Trajectory tracking comparison on one autonomous-car plant.</p><a href="https://github.com/karreng0318/PID_vs_LQR_vs_SMC_vs_MRAC-Autonomous-Car-Trajectory-Tracking">Repository</a></article>
+        <article class="card"><p class="kicker">C++</p><h3>Simple_BMS_Cpp</h3><p>Small battery-management experiment in C++.</p><a href="https://github.com/karreng0318/Simple_BMS_Cpp">Repository</a></article>
+        <article class="card"><p class="kicker">Fork</p><h3>Isaac Lab</h3><p>Robot learning on NVIDIA Isaac Sim.</p><a href="https://github.com/karreng0318/IsaacLab">Repository</a></article>
+        <article class="card"><p class="kicker">Coursework</p><h3>Self-driving car nanodegree</h3>
+          <a href="https://github.com/karreng0318/Udacity-Self-Driving-Car-Engineer_Project_1_Finding_Lane_Lines">Lanes</a> ·
+          <a href="https://github.com/karreng0318/Udacity_Self_Driving_Car_Project_3_Classifying_Traffic_signs">Signs</a> ·
+          <a href="https://github.com/karreng0318/Udacity_Self_Driving_Car_Project_4_Behavioral_Cloning">Cloning</a> ·
+          <a href="https://github.com/karreng0318/Udacity_Self_driving_car_Project_6_Self_Drving_Car_Kidnapped_Vehicle">Localization</a>
+        </article>
+        <article class="card"><p class="kicker">Planning</p><h3>Obstacle overtaking with GPMP2</h3><p>Gaussian-process motion planning for overtaking.</p><a href="https://github.com/karreng0318/obstacle-overtaking-gpmp2">Repository</a></article>
+      </div>
+    </section>
+
+    <section class="panel" id="writing" role="tabpanel" aria-labelledby="tab-writing" hidden>
+      <h2>Papers and professional service</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="tag">Elsevier · in preparation</span>
+          <h3>Journal manuscript on autonomous sailboat guidance and control</h3>
+          <p>Peer-reviewed journal submission in preparation (Elsevier), with Dr. Alireza Mohammadi.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Conference · abstract accepted</span>
+          <h3>Advanced control systems conference paper</h3>
+          <p>Co-author on an accepted conference abstract; full manuscript under review before presentation.</p>
+        </article>
+        <article class="card">
+          <span class="tag">MECC 2026</span>
+          <h3>Invited peer reviewer</h3>
+          <p>Modeling, Estimation, and Control Conference. Reviewed manuscripts on data-driven safety verification and gain synthesis for autonomous systems.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Zenodo · May 2026</span>
+          <h3>Condition Monitoring of Motorcycle Front Suspension Using Vibration Analysis and Machine Learning</h3>
+          <p>Open report (v1); experimental work from 2016 on vibration features and ML classification of fork-oil faults.</p>
+          <a href="https://doi.org/10.5281/zenodo.20103448">DOI</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="contact" role="tabpanel" aria-labelledby="tab-contact" hidden>
+      <h2>Contact</h2>
+      <p>Please reach out by email for professional inquiries. A current CV is available for download. Visa status: H-1B.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:karthik.rengarajan3@gmail.com">karthik.rengarajan3@gmail.com</a>
+        <a class="btn btn-ghost" href="tel:+19799858582">+1 (979) 985-8582</a>
+        <a class="btn btn-ghost" href="assets/Karthik_Rengarajan_CV.pdf">Download CV</a>
+        <a class="btn btn-ghost" href="https://github.com/karreng0318">GitHub</a>
+        <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=8799Yj0AAAAJ&hl=en">Scholar</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/karthik-rengarajan">LinkedIn</a>
+      </div>
+      <article class="card" style="margin-top:0.9rem">
+        <p class="kicker">Certifications</p>
+        <p>ISO 26262 Automotive Functional Safety Professional (SGS TUV, 2021) · SAE Fundamentals of Vehicle Dynamics (2025) · Coursera Algorithms for Battery Management Systems (2020) · Udacity C++ Nanodegree (2022) · Udacity Self-Driving Car Engineer Nanodegree (2021)</p>
+      </article>
+    </section>
+  </div>
+  <script>
+    const tabs = [...document.querySelectorAll("[data-tab]")];
+    const panels = [...document.querySelectorAll(".panel")];
+    function show(id) {
+      tabs.forEach((tab) => {
+        const on = tab.dataset.tab === id;
+        tab.setAttribute("aria-selected", String(on));
+      });
+      panels.forEach((panel) => {
+        const on = panel.id === id;
+        panel.classList.toggle("active", on);
+        panel.hidden = !on;
+      });
+    }
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => show(tab.dataset.tab));
+    });
+  </script>
+</body>
+</html>
