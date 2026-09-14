@@ -223,6 +223,44 @@ a {
   color: #f6f1e6;
 }
 
+.icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.55rem;
+  height: 2.55rem;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: rgba(255, 253, 248, 0.7);
+  text-decoration: none;
+}
+
+.icon-link svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: currentColor;
+}
+
+.hero .icon-link {
+  border-color: rgba(246, 241, 230, 0.35);
+  color: #f6f1e6;
+  background: rgba(246, 241, 230, 0.12);
+}
+
+.site-footer .icon-link {
+  border-color: rgba(232, 239, 233, 0.22);
+  color: #d7b56a;
+  background: transparent;
+}
+
 .hero .kicker {
   color: var(--brass-soft);
 }
@@ -516,10 +554,22 @@ h1 {
 }
 
 .path-summary li span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 0.35rem 0.75rem;
+  padding: 0.32rem 0.75rem 0.32rem 0.5rem;
+}
+
+.path-summary img {
+  height: 1.45rem;
+  width: auto;
+  max-width: 5.6rem;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
 }
 
 .path-summary li:not(:last-child)::after {
@@ -554,6 +604,22 @@ h1 {
   border-radius: 50%;
   background: var(--sea);
   box-shadow: 0 0 0 3px var(--paper);
+}
+
+.path-org {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.path-org img {
+  height: 2.4rem;
+  width: auto;
+  max-width: 8.2rem;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
 }
 
 .path-meta {
@@ -598,6 +664,7 @@ h1 {
   padding: 1.4rem 1.25rem 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -653,6 +720,11 @@ h1 {
   .year {
     display: block;
     margin-bottom: 0.35rem;
+  }
+
+  .path-org img {
+    height: 2rem;
+    max-width: 6.4rem;
   }
 
   .section-head,
