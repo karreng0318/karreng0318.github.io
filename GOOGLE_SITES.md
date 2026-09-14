@@ -1,23 +1,20 @@
 # Embed this page in Google Sites
 
-Google Sites cannot run a pasted HTML file. It can iframe a public HTTPS URL. `embed.html` is the page built for that: one file, tabbed layout, links open in a new tab.
+Google Sites cannot run a pasted HTML file. It can iframe the GitHub Pages URL.
 
-## Host the widget (no GitHub Pages)
+After you push to `main`, GitHub Pages updates:
 
-1. Open [https://app.netlify.com/drop](https://app.netlify.com/drop)
-2. Drag the folder `embed-host/` onto the page. It already contains `index.html` plus the assets the widget needs.
-3. Copy the `https://….netlify.app` URL Netlify gives you.
-
-After you edit `embed.html`, copy it to `embed-host/index.html` and drop the folder again (or replace the file in the existing Netlify site).
+- Full site: https://karreng0318.github.io/karthik-rengarajan-site/
+- Embed widget: https://karreng0318.github.io/karthik-rengarajan-site/embed.html
 
 ## Put it on your Google Site
 
 1. In Google Sites, click **Insert → Embed**
-2. Choose **By URL** and paste the Netlify link  
+2. Choose **By URL** and paste `https://karreng0318.github.io/karthik-rengarajan-site/embed.html`  
    **or** choose **Embed code** and paste:
 
 ```html
-<iframe src="YOUR_NETLIFY_URL_HERE" style="border:0; width:100%; min-height:900px; height:70vh;" loading="lazy" title="Karthik Rengarajan profile"></iframe>
+<iframe src="https://karreng0318.github.io/karthik-rengarajan-site/embed.html" style="border:0; width:100%; min-height:900px; height:70vh;" loading="lazy" title="Karthik Rengarajan profile"></iframe>
 ```
 
 3. Stretch the embed box until the tabs and cards are fully visible (about 900–1100 px tall).
