@@ -293,6 +293,10 @@ h1 {
   font-size: 0.82rem;
 }
 
+.chip {
+  font-weight: 700;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
