@@ -25,4 +25,4 @@ Insert → Embed → By URL, then paste the embed URL. Details: [GOOGLE_SITES.md
 - Copy and facts live in `index.html` and `embed.html`.
 - After editing `embed.html`, copy it to `embed-host/index.html` if you also keep a Netlify drop copy.
 - Look in `css/styles.css` for colors and layout.
-- Cover image: `assets/cover.jpg`. CV: `assets/Karthik_Rengarajan_CV.pdf`.
+- Cover image: `assets/cover.jpg`. Resume: `assets/Karthik_Rengarajan_Resume.pdf`.
