@@ -4,17 +4,17 @@ Google Sites cannot run a pasted HTML file. It can iframe the GitHub Pages URL.
 
 After you push to `main`, GitHub Pages updates:
 
-- Full site: https://karreng0318.github.io/karthik-rengarajan-site/
-- Embed widget: https://karreng0318.github.io/karthik-rengarajan-site/embed.html
+- Full site: https://karreng0318.github.io/
+- Embed widget: https://karreng0318.github.io/embed.html
 
 ## Put it on your Google Site
 
 1. In Google Sites, click **Insert → Embed**
-2. Choose **By URL** and paste `https://karreng0318.github.io/karthik-rengarajan-site/embed.html`  
+2. Choose **By URL** and paste `https://karreng0318.github.io/embed.html`  
    **or** choose **Embed code** and paste:
 
 ```html
-<iframe src="https://karreng0318.github.io/karthik-rengarajan-site/embed.html" style="border:0; width:100%; min-height:900px; height:70vh;" loading="lazy" title="Karthik Rengarajan profile"></iframe>
+<iframe src="https://karreng0318.github.io/embed.html" style="border:0; width:100%; min-height:900px; height:70vh;" loading="lazy" title="Karthik Rengarajan profile"></iframe>
 ```
 
 3. Stretch the embed box until the tabs and cards are fully visible (about 900–1100 px tall).

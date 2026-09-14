@@ -2,11 +2,11 @@
 
 Static academic / industry site: profile, career path, research, patents, repositories, writing, and contact.
 
-Live: **https://karreng0318.github.io/karthik-rengarajan-site/**
+Live: **https://karreng0318.github.io/**
 
 Push to `main` and GitHub Pages rebuilds that URL. `embed.html` is the compact version for Google Sites:
 
-https://karreng0318.github.io/karthik-rengarajan-site/embed.html
+https://karreng0318.github.io/embed.html
 
 ## Local preview
 
