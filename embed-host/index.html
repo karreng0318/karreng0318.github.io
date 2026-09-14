@@ -111,6 +111,11 @@
     .facts { list-style: none; margin: 0; padding: 0; }
     .facts li + li { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid var(--line); }
     .facts span { display: block; color: var(--brass); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .education { margin: 0.1rem 0 0.9rem; }
+    .education .kicker { margin: 0 0 0.15rem; }
+    .education ul { list-style: none; margin: 0; padding: 0; line-height: 1.25; }
+    .education li { margin: 0; color: var(--muted); }
+    .education strong { color: var(--ink); font-weight: 700; }
     .path-summary {
       list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 0.5rem;
       align-items: center; margin: 0 0 1rem; padding: 0; font-size: 0.86rem; font-weight: 650;
@@ -177,6 +182,14 @@
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/karthik-rengarajan">LinkedIn</a>
         <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=8799Yj0AAAAJ&hl=en">Scholar</a>
       </div>
+      <div class="education">
+        <p class="kicker">Education</p>
+        <ul>
+          <li><strong>D.Eng.</strong>, <strong>Computer Engineering / ECE</strong>, University of Michigan–Dearborn (Jan 2025 – present)</li>
+          <li><strong>M.Eng.</strong>, <strong>Mechanical Engineering — Controls</strong>, Texas A&amp;M University, 2018, GPA 3.88/4.0</li>
+          <li><strong>B.Tech.</strong>, <strong>Mechanical Engineering</strong>, Amrita University, 2016, GPA 9.38/10.0</li>
+        </ul>
+      </div>
       <div class="grid two">
         <article class="card">
           <p>I develop novel control algorithms, hold a utility-patent portfolio cited by automotive OEMs, and serve as a peer reviewer for control-systems conferences.</p>
@@ -184,7 +197,6 @@
         </article>
         <aside class="card">
           <ul class="facts">
-            <li><span>Education</span> D.Eng., Computer Engineering / ECE, UM–Dearborn (Jan 2025 – present), advisor Dr. Alireza Mohammadi<br>M.Eng., Mechanical Engineering — Controls, Texas A&amp;M, 2018, 3.88/4.0<br>B.Tech., Mechanical Engineering, Amrita University, 2016, 9.38/10.0</li>
             <li><span>Practice</span> Autonomous vehicles, robot motion control, sliding mode and backstepping, Kalman/particle filters, ISO 26262, ASPICE</li>
             <li><span>Tools</span> MATLAB/Simulink/Stateflow, CarSim, Python, C/C++, dSPACE, ETAS-INCA, Vector, AUTOSAR, IBM DOORS</li>
             <li><span>Visa</span> H-1B holder</li>
