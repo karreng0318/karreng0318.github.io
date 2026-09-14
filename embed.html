@@ -112,9 +112,10 @@
     .facts li + li { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid var(--line); }
     .facts span { display: block; color: var(--brass); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
     .education { margin: 0.1rem 0 0.9rem; }
-    .education .kicker { margin: 0 0 0.15rem; }
-    .education ul { list-style: none; margin: 0; padding: 0; line-height: 1.25; }
-    .education li { margin: 0; color: var(--muted); }
+    .education .kicker { margin: 0 0 0.25rem; }
+    .education ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.45rem; line-height: 1.25; }
+    .education li { display: flex; align-items: center; gap: 0.7rem; margin: 0; color: var(--muted); }
+    .education img { height: 2.3rem; width: auto; max-width: 7.6rem; object-fit: contain; object-position: left center; flex-shrink: 0; background: var(--card); }
     .education strong { color: var(--ink); font-weight: 700; }
     .path-summary {
       list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 0.5rem;
@@ -178,16 +179,26 @@
       </div>
       <div class="actions">
         <a class="btn btn-primary" href="assets/Karthik_Rengarajan_CV.pdf">Download CV</a>
-        <a class="btn btn-ghost" href="mailto:karthik.rengarajan3@gmail.com">Email</a>
+        <a class="btn btn-ghost" href="mailto:karthik.rengarajan3@gmail.com">Gmail</a>
+        <a class="btn btn-ghost" href="mailto:kartreng@umich.edu">U-M email</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/karthik-rengarajan">LinkedIn</a>
         <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=8799Yj0AAAAJ&hl=en">Scholar</a>
       </div>
       <div class="education">
         <p class="kicker">Education</p>
         <ul>
-          <li><strong>D.Eng.</strong>, <strong>Computer Engineering / ECE</strong>, University of Michigan–Dearborn (Jan 2025 – present)</li>
-          <li><strong>M.Eng.</strong>, <strong>Mechanical Engineering — Controls</strong>, Texas A&amp;M University, 2018, GPA 3.88/4.0</li>
-          <li><strong>B.Tech.</strong>, <strong>Mechanical Engineering</strong>, Amrita University, 2016, GPA 9.38/10.0</li>
+          <li>
+            <img src="assets/logos/um-dearborn.svg" alt="" width="84" height="77">
+            <span><strong>D.Eng.</strong>, <strong>Computer Engineering / ECE</strong>, University of Michigan–Dearborn (Jan 2025 – present)</span>
+          </li>
+          <li>
+            <img src="assets/logos/texas-am.svg" alt="" width="80" height="66">
+            <span><strong>M.Eng.</strong>, <strong>Mechanical Engineering — Controls</strong>, Texas A&amp;M University, 2018, GPA 3.88/4.0</span>
+          </li>
+          <li>
+            <img src="assets/logos/amrita.svg" alt="" width="245" height="63">
+            <span><strong>B.Tech.</strong>, <strong>Mechanical Engineering</strong>, Amrita University, 2016, GPA 9.38/10.0</span>
+          </li>
         </ul>
       </div>
       <div class="grid two">
@@ -199,6 +210,7 @@
           <ul class="facts">
             <li><span>Practice</span> Autonomous vehicles, robot motion control, sliding mode and backstepping, Kalman/particle filters, ISO 26262, ASPICE</li>
             <li><span>Tools</span> MATLAB/Simulink/Stateflow, CarSim, Python, C/C++, dSPACE, ETAS-INCA, Vector, AUTOSAR, IBM DOORS</li>
+            <li><span>Email</span> <a href="mailto:karthik.rengarajan3@gmail.com">karthik.rengarajan3@gmail.com</a><br><a href="mailto:kartreng@umich.edu">kartreng@umich.edu</a></li>
             <li><span>Visa</span> H-1B holder</li>
           </ul>
         </aside>
@@ -344,9 +356,10 @@
 
     <section class="panel" id="contact" role="tabpanel" aria-labelledby="tab-contact" hidden>
       <h2>Contact</h2>
-      <p>Please reach out by email for professional inquiries. A current CV is available for download. Visa status: H-1B.</p>
+      <p>Please reach out by email for professional or academic inquiries. A current CV is available for download. Visa status: H-1B.</p>
       <div class="actions">
         <a class="btn btn-primary" href="mailto:karthik.rengarajan3@gmail.com">karthik.rengarajan3@gmail.com</a>
+        <a class="btn btn-ghost" href="mailto:kartreng@umich.edu">kartreng@umich.edu</a>
         <a class="btn btn-ghost" href="tel:+19799858582">+1 (979) 985-8582</a>
         <a class="btn btn-ghost" href="assets/Karthik_Rengarajan_CV.pdf">Download CV</a>
         <a class="btn btn-ghost" href="https://github.com/karreng0318">GitHub</a>
