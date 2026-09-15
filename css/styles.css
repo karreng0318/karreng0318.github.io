@@ -465,8 +465,8 @@ h1 {
 }
 
 .cert-logo.logo-sm {
-  height: 1.2rem;
-  max-width: 5.2rem;
+  height: 0.85rem;
+  max-width: 3.8rem;
 }
 
 .card p {
@@ -578,6 +578,16 @@ h1 {
 .path-org img.logo-sm {
   height: 1.05rem;
   max-width: 3.8rem;
+}
+
+.path-org img.logo-xs {
+  height: 0.82rem;
+  max-width: 2.9rem;
+}
+
+.path-org img.logo-lg {
+  height: 2.2rem;
+  max-width: 6.4rem;
 }
 
 .path-meta {
