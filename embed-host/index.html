@@ -115,9 +115,11 @@
       letter-spacing: 0.12em; text-transform: uppercase;
       font-size: 0.7rem; color: var(--brass); font-weight: 700; margin: 0 0 0.3rem;
     }
-    .repo-lang { display: inline-flex; align-items: center; gap: 0.35rem; }
+    .repo-lang { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 0.4rem 0.75rem; }
+    .repo-lang span { display: inline-flex; align-items: center; gap: 0.35rem; }
     .repo-lang img { height: 1.1rem; width: 1.1rem; object-fit: contain; }
-    .repo-lang img.wide { width: auto; max-width: 4.8rem; }
+    .path-org img.logo-sm { height: 0.95rem; max-width: 3.4rem; }
+    .cert-logo.logo-sm { height: 1.1rem; max-width: 4.8rem; }
     .job { display: grid; gap: 0.15rem; }
     .job time { color: var(--muted); font-size: 0.86rem; }
     .facts { list-style: none; margin: 0; padding: 0; }
@@ -221,7 +223,7 @@
         <li>
           <div class="path-meta"><time datetime="2016-06">Jun 2016</time><span class="tag">Education</span></div>
           <div class="path-org">
-            <img src="assets/logos/amrita.svg" alt="" width="245" height="63">
+            <img class="logo-sm" src="assets/logos/amrita.svg" alt="" width="245" height="63">
             <div>
               <h3>B.Tech., Mechanical Engineering · Amrita University</h3>
               <p>GPA 9.38/10.0. SAEINDIA BAJA, 2013–2016: Suspension lead, designed the suspension. Final-year thesis on predictive maintenance of motorcycle suspension using machine learning.</p>
@@ -241,7 +243,7 @@
         <li>
           <div class="path-meta"><time datetime="2019-02">Feb 2019 – Feb 2022</time><span class="tag">Industry</span></div>
           <div class="path-org">
-            <img src="assets/logos/fev.svg" alt="" width="120" height="40">
+            <img class="logo-sm" src="assets/logos/fev.svg" alt="" width="120" height="40">
             <div>
               <h3>Control Systems Engineer, Electrified Powertrain · FEV</h3>
               <p>Controls for Stellantis hybrid powertrains: Jeep Compass and Renegade (EMEA) and the award-winning Jeep Wrangler PHEV (US). Torque management, motor-speed PID, start-stop, MIL/SIL/HIL. Auburn Hills, MI. Related patents were filed after I left.</p>
@@ -281,7 +283,7 @@
         <li>
           <div class="path-meta"><time datetime="2026-02">Feb 2026 – present</time><span class="tag">Industry</span></div>
           <div class="path-org">
-            <img src="assets/logos/nuro.svg" alt="" width="140" height="40">
+            <img class="logo-sm" src="assets/logos/nuro.svg" alt="" width="140" height="40">
             <div>
               <h3>Senior Controls Engineer · Nuro</h3>
               <p>Working on controls development for autonomous systems on the Uber Nuro Lucid Robotaxi program; ISO 26262 SSRs, and researching on controls system, state estimation and system modeling.</p>
@@ -338,26 +340,26 @@
       <p>Public work: <a href="https://github.com/karreng0318">github.com/karreng0318</a></p>
       <div class="grid two">
         <article class="card">
-          <p class="kicker repo-lang"><img src="assets/logos/python.svg" alt="" width="24" height="24">Python</p>
+          <p class="kicker repo-lang"><span><img src="assets/logos/python.svg" alt="" width="24" height="24">Python</span></p>
           <h3>Sailboat_Sim</h3>
           <p>Nonlinear plant with Riccati, MRAC, SMC, PID, and RL path following.</p>
           <a href="https://github.com/karreng0318/Sailboat_Sim-main">Repository</a>
         </article>
         <article class="card">
-          <p class="kicker repo-lang"><img src="assets/logos/matlab.png" alt="" width="24" height="21">MATLAB</p>
+          <p class="kicker repo-lang"><span><img src="assets/logos/matlab.png" alt="" width="24" height="21">MATLAB</span></p>
           <h3>PID vs LQR vs SMC vs MRAC</h3>
           <p>Trajectory tracking comparison on one autonomous-car plant.</p>
           <a href="https://github.com/karreng0318/PID_vs_LQR_vs_SMC_vs_MRAC-Autonomous-Car-Trajectory-Tracking">Repository</a>
         </article>
         <article class="card">
-          <p class="kicker repo-lang"><img src="assets/logos/cplusplus.svg" alt="" width="24" height="24">C++</p>
+          <p class="kicker repo-lang"><span><img src="assets/logos/cplusplus.svg" alt="" width="24" height="24">C++</span></p>
           <h3>Simplified Battery Management Systems</h3>
           <p>Simplified Battery Management Systems using C++, which utilizes modern C++ concepts to build an efficient program.</p>
           <a href="https://github.com/karreng0318/Simple_BMS_Cpp">Repository</a>
         </article>
         <article class="card">
-          <p class="kicker repo-lang"><img class="wide" src="assets/logos/udacity.svg" alt="" width="140" height="23">Coursework</p>
-          <h3>Self-driving car nanodegree</h3>
+          <p class="kicker repo-lang"><span><img src="assets/logos/cplusplus.svg" alt="" width="24" height="24">C++</span><span><img src="assets/logos/python.svg" alt="" width="24" height="24">Python</span></p>
+          <h3>Self driving</h3>
           <a href="https://github.com/karreng0318/Udacity-Self-Driving-Car-Engineer_Project_1_Finding_Lane_Lines">Lanes</a> ·
           <a href="https://github.com/karreng0318/Udacity_Self_Driving_Car_Project_3_Classifying_Traffic_signs">Signs</a> ·
           <a href="https://github.com/karreng0318/Udacity_Self_Driving_Car_Project_4_Behavioral_Cloning">Cloning</a> ·
@@ -427,7 +429,7 @@
           <p>SAE Fundamentals of Vehicle Dynamics (2025).</p>
         </article>
         <article class="card">
-          <img class="cert-logo" src="assets/logos/coursera.svg" alt="" width="140" height="20">
+          <img class="cert-logo logo-sm" src="assets/logos/coursera.svg" alt="" width="140" height="20">
           <h3>Battery management</h3>
           <p>Coursera Algorithms for Battery Management Systems (2020).</p>
         </article>

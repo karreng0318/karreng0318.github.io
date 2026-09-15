@@ -286,6 +286,13 @@ a {
 .repo-lang {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.85rem;
+}
+
+.repo-lang span {
+  display: inline-flex;
+  align-items: center;
   gap: 0.4rem;
 }
 
@@ -457,6 +464,11 @@ h1 {
   margin: 0 0 0.55rem;
 }
 
+.cert-logo.logo-sm {
+  height: 1.2rem;
+  max-width: 5.2rem;
+}
+
 .card p {
   margin: 0;
   color: var(--ink-soft);
@@ -561,6 +573,11 @@ h1 {
   object-position: left center;
   flex-shrink: 0;
   margin-top: 0.2rem;
+}
+
+.path-org img.logo-sm {
+  height: 1.05rem;
+  max-width: 3.8rem;
 }
 
 .path-meta {
