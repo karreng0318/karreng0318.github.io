@@ -504,11 +504,37 @@ h1 {
   grid-template-columns: 1fr;
 }
 
+.pub-group + .pub-group {
+  margin-top: 2rem;
+}
+
+.pub-group-title {
+  margin: 0 0 0.85rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brass);
+  font-weight: 700;
+}
+
 .pub-item {
   display: grid;
   grid-template-columns: 6.5rem 1fr auto;
   gap: 1rem;
   align-items: start;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+
+.pub-links .tag {
+  text-decoration: none;
+  color: inherit;
 }
 
 .year {
