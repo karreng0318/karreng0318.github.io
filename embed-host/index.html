@@ -115,6 +115,14 @@
       letter-spacing: 0.12em; text-transform: uppercase;
       font-size: 0.7rem; color: var(--brass); font-weight: 700; margin: 0 0 0.3rem;
     }
+    .pub-group-title {
+      font-family: var(--sans);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      font-size: 0.75rem; color: var(--brass); font-weight: 700;
+      margin: 1.1rem 0 0.55rem;
+    }
+    .pub-group-title:first-of-type { margin-top: 0.35rem; }
+    .pub-links { margin: 0.55rem 0 0; }
     .repo-lang { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 0.4rem 0.75rem; }
     .repo-lang span { display: inline-flex; align-items: center; gap: 0.35rem; }
     .repo-lang img { height: 1.1rem; width: 1.1rem; object-fit: contain; }
@@ -370,22 +378,48 @@
 
     <section class="panel" id="writing" role="tabpanel" aria-labelledby="tab-writing" hidden>
       <h2>Papers and professional service</h2>
+
+      <h3 class="pub-group-title">Authorship</h3>
       <div class="grid">
+        <article class="card">
+          <span class="tag">arXiv · 2026</span>
+          <h3>Correcting Persistent Failures in Point-Cloud Grasping Policies using Human Demonstrations in Virtual Reality</h3>
+          <p>Co-author (equal contribution with Achyuthan Unni Krishnan). Human-in-the-loop failure mining for RL point-cloud grasping via VR demonstrations. With Bharath Narasimhan and Chris von Csefalvay.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2611.18919">arXiv</a>
+            ·
+            <a href="https://huggingface.co/papers/2611.18919">Hugging Face</a>
+          </p>
+        </article>
         <article class="card">
           <span class="tag">Conference · abstract accepted</span>
           <h3>Advanced control systems conference paper</h3>
           <p>Co-author on an accepted conference abstract; full manuscript under review before presentation.</p>
         </article>
         <article class="card">
-          <span class="tag">MECC 2026</span>
-          <h3>Peer review</h3>
-          <p>Some manuscript review for the Modeling, Estimation, and Control Conference.</p>
-        </article>
-        <article class="card">
           <span class="tag">Zenodo · May 2026</span>
           <h3>Condition Monitoring of Motorcycle Front Suspension Using Vibration Analysis and Machine Learning</h3>
           <p>B.Tech. final-year thesis on predictive maintenance of motorcycle suspension using machine learning. Published as an open report on Zenodo in May 2026 (v1). Experimental work from 2016: vibration features and ML classification of fork-oil faults.</p>
           <a href="https://doi.org/10.5281/zenodo.20103448">DOI</a>
+        </article>
+      </div>
+
+      <h3 class="pub-group-title">Reviews</h3>
+      <div class="grid">
+        <article class="card">
+          <span class="tag">ACC 2027</span>
+          <h3>Peer review (confidential / not public)</h3>
+          <p>Manuscript review for the American Control Conference 2027. Title and authors withheld while the paper remains confidential.</p>
+        </article>
+        <article class="card">
+          <span class="tag">ACC 2027</span>
+          <h3>Peer review (confidential / not public)</h3>
+          <p>Manuscript review for the American Control Conference 2027. Title and authors withheld while the paper remains confidential.</p>
+        </article>
+        <article class="card">
+          <span class="tag">MECC 2026</span>
+          <h3>Peer review</h3>
+          <p>Some manuscript review for the Modeling, Estimation, and Control Conference.</p>
         </article>
       </div>
     </section>
